@@ -1,0 +1,16 @@
+
+<suite name="Suite">
+<groups>
+<run>
+<include name = "smoketest"/>
+</run>
+</groups>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.comcast.crm.orgTest.CreateOrgTest"/>
+      <class name="com.comcast.crm.contactTest.CreateContactTest"/>
+      <class name="com.comcast.crm.leadsTest.CreateLeadTest"/>
+      <class name="com.comcast.crm.productTest.CreateProductTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

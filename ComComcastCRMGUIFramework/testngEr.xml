@@ -1,0 +1,16 @@
+
+<suite name="Suite">
+<listeners>
+<listener class-name = "com.comcast.crm.generic.ListenerUtilty.ListenerImplementation"/>
+</listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.comcast.crm.leadsTest.CreateLeadTest">
+      <methods>
+      	<include name = "CreateLead"/>
+      </methods>
+      </class>
+     
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

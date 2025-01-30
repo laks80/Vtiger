@@ -49,7 +49,7 @@
 </dependency>
 </dependencies>
 <profiles>
-	<profile><id>FT</id>
+	<profile><id>RT</id>
 	<build>
 		<plugins>
 			<plugin>

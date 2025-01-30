@@ -74,13 +74,13 @@ public class BaseClass {
 
 	@BeforeMethod(alwaysRun = true)
 	public void configBeforeMethod() throws IOException {
-
-		String browser = System.getProperty("browser", "pLib.getDataFromPropertyFile('browser')");
+		
+		String browser = System.getProperty("browser", pLib.getDataFromPropertyFile("browser"));
 				//pLib.getDataFromPropertyFile("browser");
 		
-		String url = System.getProperty("url","pLib.getDataFromPropertyFile('url')");
-		String username = System.getProperty("username","pLib.getDataFromPropertyFile('username')");
-		String password = System.getProperty("password","pLib.getDataFromPropertyFile('password')");
+		String url = System.getProperty("url",pLib.getDataFromPropertyFile("url"));
+		String username = System.getProperty("username",pLib.getDataFromPropertyFile("username"));
+		String password = System.getProperty("password",pLib.getDataFromPropertyFile("password"));
 		wLib.enterUrl(url);
 		wLib.waitForPageLoad(driver);
 		wLib.maximizeBrowser();

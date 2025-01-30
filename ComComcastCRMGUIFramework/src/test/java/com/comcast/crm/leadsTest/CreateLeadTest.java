@@ -80,13 +80,13 @@ public class CreateLeadTest extends BaseClass {
 		SoftAssert s = new SoftAssert();
 		s.assertEquals(actlastname.trim(), lastName);
 		
-		wLib.verifyNotMandatory(actlastname, lastName);
+		
 
 		// validate company in details page
 
 		String actcompany = leadInfoP.getCompanyInfo().getText();
-
-		wLib.verifyNotMandatory(actcompany.trim(), company);
+		s.assertEquals(actcompany.trim(), company);
+		
 		UtilityClassObject.getTest().log(Status.INFO, "validate product name in header of details page");
 		// validate user in details page
 

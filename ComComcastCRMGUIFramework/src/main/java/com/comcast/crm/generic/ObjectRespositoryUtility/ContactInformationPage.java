@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class ContactInformationPage {
 	
 
-	@FindBy(className  = "dvHeaderText")
+	@FindBy(xpath  ="//span[@class='dvHeaderText']")
 	private WebElement contactHeader;
 	@FindBy(id = "mouseArea_Last Name")
 	private WebElement contactInfo;

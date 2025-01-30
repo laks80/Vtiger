@@ -11,27 +11,27 @@
       <![CDATA[end-->test]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-01-28T16:45:45 IST" name="Default suite" finished-at="2025-01-28T16:46:11 IST" duration-ms="26092">
+  <suite started-at="2025-01-29T19:34:34 IST" name="Default suite" finished-at="2025-01-29T19:34:42 IST" duration-ms="7791">
     <groups>
       <group name="smoketest">
-        <method signature="CreateContactTest.CreateContact()[pri:0, instance:com.comcast.crm.contactTest.CreateContactTest@239a307b]" name="CreateContact" class="com.comcast.crm.contactTest.CreateContactTest"/>
+        <method signature="CreateProductTest.CreateProduct()[pri:0, instance:com.comcast.crm.productTest.CreateProductTest@4116aac9]" name="CreateProduct" class="com.comcast.crm.productTest.CreateProductTest"/>
       </group> <!-- smoketest -->
     </groups>
-    <test started-at="2025-01-28T16:45:45 IST" name="Default test" finished-at="2025-01-28T16:46:11 IST" duration-ms="26092">
-      <class name="com.comcast.crm.contactTest.CreateContactTest">
-        <test-method is-config="true" signature="configBeforeSuite()[pri:0, instance:com.comcast.crm.contactTest.CreateContactTest@239a307b]" started-at="2025-01-28T16:45:45 IST" name="configBeforeSuite" finished-at="2025-01-28T16:45:45 IST" duration-ms="247" status="PASS">
+    <test started-at="2025-01-29T19:34:34 IST" name="Default test" finished-at="2025-01-29T19:34:42 IST" duration-ms="7791">
+      <class name="com.comcast.crm.productTest.CreateProductTest">
+        <test-method is-config="true" signature="configBeforeSuite()[pri:0, instance:com.comcast.crm.productTest.CreateProductTest@4116aac9]" started-at="2025-01-29T19:34:34 IST" name="configBeforeSuite" finished-at="2025-01-29T19:34:34 IST" duration-ms="452" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBeforeSuite -->
-        <test-method is-config="true" signature="configBeforeClass()[pri:0, instance:com.comcast.crm.contactTest.CreateContactTest@239a307b]" started-at="2025-01-28T16:45:45 IST" name="configBeforeClass" finished-at="2025-01-28T16:45:47 IST" duration-ms="1458" status="PASS">
+        <test-method is-config="true" signature="configBeforeClass()[pri:0, instance:com.comcast.crm.productTest.CreateProductTest@4116aac9]" started-at="2025-01-29T19:34:34 IST" name="configBeforeClass" finished-at="2025-01-29T19:34:36 IST" duration-ms="1455" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBeforeClass -->
-        <test-method is-config="true" signature="configBeforeMethod()[pri:0, instance:com.comcast.crm.contactTest.CreateContactTest@239a307b]" started-at="2025-01-28T16:45:47 IST" name="configBeforeMethod" finished-at="2025-01-28T16:45:57 IST" duration-ms="10621" status="PASS">
+        <test-method is-config="true" signature="configBeforeMethod()[pri:0, instance:com.comcast.crm.productTest.CreateProductTest@4116aac9]" started-at="2025-01-29T19:34:36 IST" name="configBeforeMethod" finished-at="2025-01-29T19:34:38 IST" duration-ms="1889" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBeforeMethod -->
-        <test-method signature="CreateContact()[pri:0, instance:com.comcast.crm.contactTest.CreateContactTest@239a307b]" started-at="2025-01-28T16:45:57 IST" name="CreateContact" finished-at="2025-01-28T16:46:04 IST" duration-ms="6379" status="PASS">
+        <test-method signature="CreateProduct()[pri:0, instance:com.comcast.crm.productTest.CreateProductTest@4116aac9]" started-at="2025-01-29T19:34:38 IST" name="CreateProduct" finished-at="2025-01-29T19:34:41 IST" duration-ms="3471" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[start-->test]]>
@@ -40,20 +40,20 @@
               <![CDATA[end-->test]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CreateContact -->
-        <test-method is-config="true" signature="configAfterMethod()[pri:0, instance:com.comcast.crm.contactTest.CreateContactTest@239a307b]" started-at="2025-01-28T16:46:04 IST" name="configAfterMethod" finished-at="2025-01-28T16:46:11 IST" duration-ms="7440" status="PASS">
+        </test-method> <!-- CreateProduct -->
+        <test-method is-config="true" signature="configAfterMethod()[pri:0, instance:com.comcast.crm.productTest.CreateProductTest@4116aac9]" started-at="2025-01-29T19:34:41 IST" name="configAfterMethod" finished-at="2025-01-29T19:34:42 IST" duration-ms="695" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAfterMethod -->
-        <test-method is-config="true" signature="configAfterClass()[pri:0, instance:com.comcast.crm.contactTest.CreateContactTest@239a307b]" started-at="2025-01-28T16:46:11 IST" name="configAfterClass" finished-at="2025-01-28T16:46:11 IST" duration-ms="159" status="PASS">
+        <test-method is-config="true" signature="configAfterClass()[pri:0, instance:com.comcast.crm.productTest.CreateProductTest@4116aac9]" started-at="2025-01-29T19:34:42 IST" name="configAfterClass" finished-at="2025-01-29T19:34:42 IST" duration-ms="242" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAfterClass -->
-        <test-method is-config="true" signature="configAfterSuite()[pri:0, instance:com.comcast.crm.contactTest.CreateContactTest@239a307b]" started-at="2025-01-28T16:46:11 IST" name="configAfterSuite" finished-at="2025-01-28T16:46:11 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="configAfterSuite()[pri:0, instance:com.comcast.crm.productTest.CreateProductTest@4116aac9]" started-at="2025-01-29T19:34:42 IST" name="configAfterSuite" finished-at="2025-01-29T19:34:42 IST" duration-ms="15" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAfterSuite -->
-      </class> <!-- com.comcast.crm.contactTest.CreateContactTest -->
+      </class> <!-- com.comcast.crm.productTest.CreateProductTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

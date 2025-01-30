@@ -75,7 +75,8 @@ public class BaseClass {
 	@BeforeMethod(alwaysRun = true)
 	public void configBeforeMethod() throws IOException {
 
-		String browser = pLib.getDataFromPropertyFile("browser");
+		String browser = System.getProperty("browser", "pLib.getDataFromPropertyFile('browser')");
+				//pLib.getDataFromPropertyFile("browser");
 		
 		String url = pLib.getDataFromPropertyFile("url");
 		String username = pLib.getDataFromPropertyFile("username");

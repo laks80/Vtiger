@@ -7,9 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class OrganizationInformationPage {
 	
-	@FindBy(className  = "dvHeaderText")
+	@FindBy(xpath  = "//span[@class='dvHeaderText']")
 	private WebElement orgHeader;
-	@FindBy(className  = "dvtCellInfo")
+	@FindBy(id  = "mouseArea_Organization Name")
 	private WebElement orgNameInfo;
 	@FindBy(id  = "dtlview_Industry")
 	private WebElement industryInfo;

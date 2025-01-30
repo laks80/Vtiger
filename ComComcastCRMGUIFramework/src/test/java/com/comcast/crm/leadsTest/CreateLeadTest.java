@@ -78,7 +78,7 @@ public class CreateLeadTest extends BaseClass {
 		String actlastname = leadInfoP.getLeadInfo().getText();
 		
 		SoftAssert s = new SoftAssert();
-		s.assertEquals(actlastname, lastName);
+		s.assertEquals(actlastname.trim(), lastName);
 		
 		wLib.verifyNotMandatory(actlastname, lastName);
 
@@ -86,21 +86,20 @@ public class CreateLeadTest extends BaseClass {
 
 		String actcompany = leadInfoP.getCompanyInfo().getText();
 
-		wLib.verifyNotMandatory(actcompany, company);
+		wLib.verifyNotMandatory(actcompany.trim(), company);
 		UtilityClassObject.getTest().log(Status.INFO, "validate product name in header of details page");
 		// validate user in details page
 
 		String actuser = driver.findElement(By.xpath("//a[contains(text(),'" + user + "')]")).getText();
-		//wLib.verifyNotMandatory(actuser, user);
 		
-		s.assertEquals(actuser, user);
+		s.assertEquals(actuser.trim(), user);
 		s.assertAll("Asserted all");
 
 	}
 
 	@Test(groups = "regressiontest")
 	public void CreateLeadwithLeadStatus() throws EncryptedDocumentException, IOException {
-
+		UtilityClassObject.getTest().log(Status.INFO, "Get data from excel");
 		String lastName = eLib.getDataFromExcel("leads", 4, 2).toString() + jLib.getRandomNumber();
 		String company = eLib.getDataFromExcel("leads", 4, 3).toString() + jLib.getRandomNumber();
 		String group = eLib.getDataFromExcel("leads", 4, 4).toString();
@@ -114,20 +113,20 @@ public class CreateLeadTest extends BaseClass {
 
 		// click on leads link
 		homeP.getLeadsLink().click();
-
+		UtilityClassObject.getTest().log(Status.INFO, "click on leads link");
 		// click on + button
 		leadP.getLeadBtn().click();
-
-		// enter product name
+		UtilityClassObject.getTest().log(Status.INFO, "Enter lead name");
+		// enter lead name
 		createLeadP.getLastNameTxt().sendKeys(lastName);
-
+		UtilityClassObject.getTest().log(Status.INFO, "Enter the contact name");
 		createLeadP.getCompanyTxt().sendKeys(company);
-
+		UtilityClassObject.getTest().log(Status.INFO, "Enter the company");
 		// select group
 		createLeadP.getGroupRadioBtn().click();
 
 		// select group info
-
+		UtilityClassObject.getTest().log(Status.INFO, "Enter group info");
 		WebElement s = createLeadP.getGroupDd();
 		wLib.selectDropdown(s, group);
 		// select status
@@ -136,9 +135,10 @@ public class CreateLeadTest extends BaseClass {
 		wLib.selectDropdown(s1, status);
 		// click on save button
 		createLeadP.getSaveBtn().click();
+		UtilityClassObject.getTest().log(Status.INFO, "Save the Lead");
 		wLib.waitForPageLoad(driver);
-		// validate product name in header of details page
-
+		// validate lead name in header of details page
+		UtilityClassObject.getTest().log(Status.INFO, "verify lead name");
 		String header = leadInfoP.getLeadHeader().getText();
 
 		wLib.verifyMandatory(header, lastName);
@@ -148,33 +148,32 @@ public class CreateLeadTest extends BaseClass {
 		String actlastname = leadInfoP.getLeadInfo().getText();
 		SoftAssert soft = new SoftAssert();
 	
-		
-		soft.assertEquals(actlastname, lastName);
+		soft.assertEquals(actlastname.trim(), lastName);
 		// validate company in details page
 
 		String actcompany = leadInfoP.getCompanyInfo().getText();
-
+		UtilityClassObject.getTest().log(Status.INFO, "verify company");
 		
-		soft.assertEquals(actcompany, company);
+		soft.assertEquals(actcompany.trim(), company);
 		// validate group in details page
-
+		UtilityClassObject.getTest().log(Status.INFO, "verify group");
 		String actgroup = driver.findElement(By.xpath("//a[contains(text(),'" + group + "')]")).getText();
 		
-		soft.assertEquals(actgroup, group);
+		soft.assertEquals(actgroup.trim(), group);
 		
 		// validate status in details page
-
+		UtilityClassObject.getTest().log(Status.INFO, "verify status");
 		String actstatus = leadInfoP.getStatusinfo().getText();
 
 		
-		soft.assertEquals(actstatus, status);
+		soft.assertEquals(actstatus.trim(), status);
 		soft.assertAll();
 	}
 
 	@Test(groups = "regressiontest")
 
 	public void DeleteLead() throws EncryptedDocumentException, IOException {
-
+		UtilityClassObject.getTest().log(Status.INFO, "Get data from excel");
 		String lastName = eLib.getDataFromExcel("leads", 7, 2).toString() + jLib.getRandomNumber();
 		String company = eLib.getDataFromExcel("leads", 7, 3).toString() + jLib.getRandomNumber();
 		String user = eLib.getDataFromExcel("leads", 7, 4).toString();
@@ -184,22 +183,22 @@ public class CreateLeadTest extends BaseClass {
 		LeadsPage leadP = new LeadsPage(driver);
 		CreatingNewLeadPage createLeadP = new CreatingNewLeadPage(driver);
 		LeadInformationPage leadInfoP = new LeadInformationPage(driver);
-
+		UtilityClassObject.getTest().log(Status.INFO, "click on leads link");
 		// click on leads link
 		homeP.getLeadsLink().click();
 
 		// click on + button
 		leadP.getLeadBtn().click();
-
+		
 		// enter product name
 		createLeadP.getLastNameTxt().sendKeys(lastName);
-
+		UtilityClassObject.getTest().log(Status.INFO, "Enter last name");
 		// enter company
 		createLeadP.getCompanyTxt().sendKeys(company);
-
+		UtilityClassObject.getTest().log(Status.INFO, "enter company name");
 		// select user
 		createLeadP.getUserRadioBtn().click();
-
+		UtilityClassObject.getTest().log(Status.INFO, "select user");
 		// select user info
 		WebElement s = createLeadP.getUserDd();
 
@@ -207,7 +206,7 @@ public class CreateLeadTest extends BaseClass {
 
 		// click on save button
 		createLeadP.getSaveBtn().click();
-		;
+		UtilityClassObject.getTest().log(Status.INFO, "save lead");
 
 		wLib.waitForPageLoad(driver);
 		// validate lead name in header of details page
@@ -217,27 +216,27 @@ public class CreateLeadTest extends BaseClass {
 		wLib.verifyMandatory(header, lastName);
 
 		// validate last name in details page
-
+		UtilityClassObject.getTest().log(Status.INFO, "verify last name");
 		String actlastname = leadInfoP.getLeadInfo().getText();
 		
         SoftAssert soft = new SoftAssert();
 	
 		
-        soft.assertEquals(actlastname, lastName);
+        soft.assertEquals(actlastname.trim(), lastName);
 		
-
+       
 		// validate company in details page
 
 		String actcompany = leadInfoP.getCompanyInfo().getText();
-		 soft.assertEquals(actcompany, company);
+		 soft.assertEquals(actcompany.trim(), company);
 		
-
+		 UtilityClassObject.getTest().log(Status.INFO, "verify company name");
 		// validate user in details page
 
 		String actuser = driver.findElement(By.xpath("//a[contains(text(),'" + user + "')]")).getText();
 
 		
-		soft.assertEquals(actuser, user);
+		soft.assertEquals(actuser.trim(), user);
 		// click on leads link
 		homeP.getLeadsLink().click();
 
@@ -250,19 +249,19 @@ public class CreateLeadTest extends BaseClass {
 		WebElement s1 = leadP.getInDd();
 
 		wLib.selectDropdown(s1, category);
-
+		UtilityClassObject.getTest().log(Status.INFO, "Select Category");
 		// click on search button
 		wLib.waitForPageLoad(driver);
 		leadP.getSearchBtn().click();
-
+		UtilityClassObject.getTest().log(Status.INFO, "Click on search button");
 		// check the box to be deleted
 		wLib.waitForPageLoad(driver);
 		leadP.getCheckBox().click();
-
+		UtilityClassObject.getTest().log(Status.INFO, "select a lead to delete");
 		wLib.waitForPageLoad(driver);
 		// click on delete
 		leadP.getDeleteBtn().click();
-
+		UtilityClassObject.getTest().log(Status.INFO, "Click on delete button");
 		// click on ok in confirmation pop up
 		wLib.switchToAlertAccept(driver);
 
@@ -283,9 +282,9 @@ public class CreateLeadTest extends BaseClass {
 
 		wLib.waitForPageLoad(driver);
 		// verify record deleted
-
+		UtilityClassObject.getTest().log(Status.INFO, "verify if the lead is deleted");
 		String msg = leadP.getMsgBox().getText();
-		soft.assertEquals(msg," No Lead Found");
+		soft.assertEquals(msg,"No Lead Found !");
 		
 		soft.assertAll();
 

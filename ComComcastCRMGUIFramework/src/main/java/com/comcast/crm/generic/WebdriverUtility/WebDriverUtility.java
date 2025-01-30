@@ -164,19 +164,6 @@ public class WebDriverUtility {
 			
 				    
 			}
-			public void verifyNotMandatory(String actName, String name)
-			{	
-			
-				SoftAssert s = new SoftAssert();
-				
-				s.assertTrue(actName.equals(name), "Test case fail");
-		    
-			}
-			public void assertAll()
-			{
-				SoftAssert s = new SoftAssert();
-				s.assertAll("Assertion done");
-			}
 			
 		
 			public WebDriver launchBrowser(String browser)

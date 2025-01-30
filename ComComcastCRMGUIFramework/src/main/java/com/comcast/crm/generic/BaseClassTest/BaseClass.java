@@ -78,9 +78,9 @@ public class BaseClass {
 		String browser = System.getProperty("browser", "pLib.getDataFromPropertyFile('browser')");
 				//pLib.getDataFromPropertyFile("browser");
 		
-		String url = pLib.getDataFromPropertyFile("url");
-		String username = pLib.getDataFromPropertyFile("username");
-		String password = pLib.getDataFromPropertyFile("password");
+		String url = System.getProperty("url","pLib.getDataFromPropertyFile('url')");
+		String username = System.getProperty("username","pLib.getDataFromPropertyFile('username')");
+		String password = System.getProperty("password","pLib.getDataFromPropertyFile('password')");
 		wLib.enterUrl(url);
 		wLib.waitForPageLoad(driver);
 		wLib.maximizeBrowser();
